@@ -22,6 +22,7 @@ use Drupal\Core\Block\BlockBase as blockB;
  * @Block(
  *   id = "customBlock",
  *   admin_label = @Translation("Hello World Custom Block"),
+ *   category = @Translation("D9 Custom Block"),
  * )
  */
 class customBlock extends blockB {
