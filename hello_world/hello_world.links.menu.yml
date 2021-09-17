@@ -11,4 +11,19 @@ hello_world.simpleCustomForm:
     menu_name: main
 
 
+hello_world.formConfig:
+    title: 'Register Form'
+    route_name: hello_world.formConfig
+    parent: system.admin_config
+    weight: 0
+    menu_name: main
+
+
+hello_world.formConfigSettings:
+    title: 'Config Register Form'
+    route_name: hello_world.formConfigSettings
+    parent: hello_world.formConfig
+    weight: 0
+    menu_name: main
+    
 # parent: system.admin_config

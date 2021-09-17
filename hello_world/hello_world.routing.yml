@@ -13,3 +13,20 @@ hello_world.simpleCustomForm:
     _title: 'Hello World Registration Form!'
   requirements:
     _permission: 'access content'
+
+
+hello_world.formConfig:
+  path: '/config/simpleForm'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Register Form Config'
+  requirements:
+    _permission: 'access administration pages'
+
+hello_world.formConfigSettings:
+  path: '/config/simpleFormConfig'
+  defaults:
+    _form: '\Drupal\hello_world\Form\customConfigSimpleForms'
+    _title: 'Config Register Form'
+  requirements:
+    _permission: 'administration site configuration'
