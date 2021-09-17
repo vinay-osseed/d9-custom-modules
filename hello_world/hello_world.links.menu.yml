@@ -1,5 +1,8 @@
 hello_world.HelloWorld:
-    title: 'Hello'
+    title: 'Greeting'
     route_name: hello_world.HelloWorld
     weight: 1
     menu_name: main
+
+
+# parent: system.admin_config

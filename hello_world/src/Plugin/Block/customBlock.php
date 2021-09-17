@@ -11,20 +11,27 @@
   */
 /**
  * @file
- * Contains \Drupal\hello_world\Controller\.
- * @author Vinay Gawade
+ * Contains \Drupal\hello_world\Plugin\Block\.
  */
-namespace Drupal\hello_world\Controller;
+namespace Drupal\hello_world\Plugin\Block;
+use Drupal\Core\Block\BlockBase as blockB;
+
 /**
- * return simple markup text
- * @return array
+ * Provides a Custom Block.
+ *
+ * @Block(
+ *   id = "customBlock",
+ *   admin_label = @Translation("Hello World Custom Block"),
+ * )
  */
-class helloWorld {
-  public function show() {
-    $text = array(
-      '#markup' => "Practice Makes Developer's <del>Perfect</del> Good Debugger!",
+class customBlock extends blockB {
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    return array(
+      '#type' => 'markup',
+      '#markup' => '<strong>Hello World</strong> In Custom Block.',
     );
-    return $text;
   }
 }
-?>
