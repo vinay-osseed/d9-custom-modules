@@ -33,6 +33,9 @@ class customBlock extends blockB {
     return array(
       '#type' => 'markup',
       '#markup' => '<strong>Hello World</strong> In Custom Block.',
+      '#cache' => [
+          'max-age' => 0,
+          ]
     );
   }
 }

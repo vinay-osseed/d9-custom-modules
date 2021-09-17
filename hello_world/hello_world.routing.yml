@@ -1,7 +1,15 @@
 hello_world.HelloWorld:
-  path: '/hello_world'
+  path: '/hello-world'
   defaults:
     _controller: '\Drupal\hello_world\Controller\helloWorld::show'
     _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+hello_world.simpleCustomForm:
+  path: '/reg-form'
+  defaults:
+    _form: '\Drupal\hello_world\Form\customForm'
+    _title: 'Hello World Registration Form!'
   requirements:
     _permission: 'access content'
