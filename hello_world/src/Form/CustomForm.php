@@ -18,7 +18,7 @@ namespace Drupal\hello_world\Form;
 use Drupal\Core\Form\FormBase as formB;
 use Drupal\Core\Form\FormStateInterface as formStIn;
 
-class customForm extends formB {
+class CustomForm extends formB {
   /**
    * {@inheritdoc}
    */

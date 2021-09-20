@@ -9,7 +9,7 @@ hello_world.HelloWorld:
 hello_world.simpleCustomForm:
   path: '/reg-form'
   defaults:
-    _form: '\Drupal\hello_world\Form\customForm'
+    _form: '\Drupal\hello_world\Form\CustomForm'
     _title: 'Hello World Registration Form!'
   requirements:
     _permission: 'access content'
@@ -26,7 +26,7 @@ hello_world.formConfig:
 hello_world.formConfigSettings:
   path: '/config/simpleFormConfig'
   defaults:
-    _form: '\Drupal\hello_world\Form\customConfigSimpleForms'
+    _form: '\Drupal\hello_world\Form\CustomConfigSimpleForms'
     _title: 'Config Register Form'
   requirements:
     _permission: 'administration site configuration'

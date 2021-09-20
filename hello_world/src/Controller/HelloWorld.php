@@ -21,7 +21,7 @@ class HelloWorld {
    */
   public function show() {
     $text = [
-      '#title' => "HELLO WORLD",
+      '#title' => "Hello World",
       '#markup' => "Practice Makes Developer's <del>Perfect</del> Good Debugger!",
     ];
     return $text;
