@@ -1,0 +1,9 @@
+id: get_blog_post_list
+plugin_id: get_blog_post_list
+granularity: method
+configuration:
+  GET:
+    formats:
+      - json
+    authentication:
+      - basic_auth
