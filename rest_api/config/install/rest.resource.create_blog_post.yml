@@ -1,0 +1,9 @@
+id: create_blog_post
+plugin_id: create_blog_post
+granularity: resource
+configuration:
+  POST:
+    formats:
+      - json
+    authentication:
+      - basic_auth

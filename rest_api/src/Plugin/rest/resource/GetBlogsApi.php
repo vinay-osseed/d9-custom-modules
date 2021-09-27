@@ -90,11 +90,13 @@ class GetBlogsApi extends ResourceBase {
     if (!$this->currentUser->hasPermission('access content')) {
       throw new AccessDeniedHttpException();
     }
-    $entities = Drupal::entityTypeManager()
-      ->getStorage('node')
-      ->loadMultiple();
+    $entities = Drupal::entityTypeManager()->getStorage('node')->loadMultiple();
+
     foreach ($entities as $entity) {
-      $result[$entity->id()] = $entity->title->value;
+      $result[$entity->id()] = [
+        "Title" => $entity->title->value,
+        "Body" => $entity->body->value,
+      ];
     }
 
     $response = new ResourceResponse($result);
