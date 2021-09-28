@@ -1,0 +1,9 @@
+id: patch_blog_post
+plugin_id: patch_blog_post
+granularity: resource
+configuration:
+  PATCH:
+    formats:
+      - json
+    authentication:
+      - basic_auth
