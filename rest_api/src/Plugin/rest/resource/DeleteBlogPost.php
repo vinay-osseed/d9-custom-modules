@@ -4,7 +4,6 @@ namespace Drupal\rest_api\Plugin\rest\resource;
 
 use Drupal\Core\Session\AccountProxyInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
-use Drupal\rest\ModifiedResourceResponse;
 use Drupal\rest\Plugin\ResourceBase;
 use Drupal\rest\ResourceResponse;
 use Psr\Log\LoggerInterface;
@@ -81,7 +80,7 @@ class DeleteBlogPost extends ResourceBase {
    * Creates a new node.
    *
    * @param int $nid
-   *   Data to create the node.
+   *   Data to Delete the node.
    *
    * @throws \Symfony\Component\HttpKernel\Exception\HttpException
    *   Throws exception expected.
@@ -96,7 +95,8 @@ class DeleteBlogPost extends ResourceBase {
 
     $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
     if ($node) {
-      $node->delete(); // Delete That Node From Instance.
+      $node->delete();
+      // Deleted That Node From Instance.
     }
 
     // Return response with 204 - No Content Status Code.
