@@ -1,0 +1,9 @@
+id: delete_blog_post
+plugin_id: delete_blog_post
+granularity: resource
+configuration:
+  DELETE:
+    formats:
+      - json
+    authentication:
+      - basic_auth
